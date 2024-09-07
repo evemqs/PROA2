@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/atividades/forms/forms.css">
+  <title>Formulários</title>
+</head>
+<body>
+  <main>
+      <form>
+        <fieldset>
+          <legend>Informações Pessoais</legend>
+          <label for="fname">Primeiro Nome:</label><br>
+          <input type="text" name="fname"><br>
+
+          <label for="lname">Segundo Nome:</label><br>
+          <input type="text" name="lname"><br>
+
+          <label for="date">Data de Nascimento:</label><br>
+          <input type="date" name="date"><br>
+
+          <label for="quantity">Qual seu nível de inglês (1 até 5):</label><br>
+          <input type="number" name="quantity" min="1" max="5"><br>
+
+          <label for="email">Coloque seu Email:</label><br>
+          <input type="email" name="email"><br>
+        </fieldset>
+
+      <fieldset>
+        <legend>Informações Profissionais</legend>
+        <label for="link">Link do seu GitHub:</label><br>
+        <input type="url" name="url"><br>
+        
+        <p>Escolha sua linguagem favorita:</p>
+        <input type="radio" name="fav-language" id="html">
+        <label for="html">HTML</label><br>
+        <input type="radio" name="fav-language" id="css">
+        <label for="css">CSS</label><br>
+        <input type="radio" name="fav-language" id="js">
+        <label for="js">JavaScript</label>
+
+        <p>Escolha seu editor gráfico favorito:</p>
+        <input type="checkbox" name="edt-favorite" id="canva">
+        <label for="canva">Canva</label><br>
+        <input type="checkbox" name="edt-favorite" id="figma">
+        <label for="figma">Figma</label><br>
+        <input type="checkbox" name="edt-favorite" id="paint">
+        <label for="paint">Paint</label>
+
+        <p>Qual sua formação:</p>
+        <select name="formacao" size="4">
+          <option value="medio">Médio Completo</option>
+          <option value="tec">Técnico</option>
+          <option value="gradCursando">Graduação Cursando</option>
+          <option value="gradCompleto">Graduação Completo</option>
+          <option value="mestrado">Mestrado</option>
+        </select>
+
+        <p>Escolha seu curso:</p>
+        <input list="cursos">
+        <datalist id="cursos">
+          <option value="ADS"></option>
+          <option value="Engenharia da Computação"></option>
+          <option value="Sistemas para Internet"></option>
+          <option value="BCC"></option>
+          <option value="LC"></option>
+        </datalist>
+
+        <p>Escreva um pouco da sua experiência:</p>
+        <textarea name="message" rows="10" cols="30"></textarea>
+      </fieldset>
+      <input type="reset" value="Limpar">
+      <input type="submit" value="Enviar">
+    </form>
+
+    <h1>Formulário</h1>
+    <form>
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        <label for="name">Nome:</label><br>
+        <input type="text" name="name"><br>
+        <label for="address">Endereço:</label><br>
+        <input type="text" name="address"><br>
+        <label for="city">Cidade</label><br>
+        <input type="text" name="city"><br>
+        <label for="state">Estado:</label><br>
+        <input list="state">
+        <datalist id="state">
+          <option value="São Paulo"></option>
+          <option value="Pernambuco"></option>
+          <option value="Rio de Janeiro"></option>
+        </datalist>
+      </fieldset>
+
+      <fieldset>
+        <legend>Dados Profissionais</legend>
+        <p>Natureza do Cargo</p>
+        <input type="radio" name="cargo" id="gerencia">
+        <label for="gerencia">Gerência</label><br>
+        <input type="radio" name="cargo" id="financeiro">
+        <label for="financeiro">Financeiro</label><br>
+        <input type="radio" name="cargo" id="recepcao">
+        <label for="recepcao">Recepção</label><br>
+        <input type="radio" name="cargo" id="administrativo">
+        <label for="administrativo">Administrativo</label><br>
+        <input type="radio" name="cargo" id="juridico">
+        <label for="juridico">Jurídico</label><br>
+
+        <p>Área de Interesse</p>
+        <input type="checkbox" name="area" id="computacao">
+        <label for="computacao">Computação</label><br>
+        <input type="checkbox" name="area" id="biologia">
+        <label for="biologia">Biologia</label><br>
+        <input type="checkbox" name="area" id="ambiente">
+        <label for="ambiente">Meio Ambiente</label><br>
+        <input type="checkbox" name="area" id="engenharia">
+        <label for="engenharia">Engenharia</label><br>
+        <input type="checkbox" name="area" id="historia">
+        <label for="historia">História</label>
+
+        <p>Mini-currículo:</p>
+        <textarea name="message" rows="10" cols="30"></textarea>
+      </fieldset>
+      <input type="reset" value="Limpar">
+      <input type="submit" value="Enviar">
+    </form>
+  </main>
+</body>
+</html>

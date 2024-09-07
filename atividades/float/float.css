@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#elemento-pai {
+  width: 47.9%;
+  height: 100px;
+  background-color: #ab64d3;
+  padding: 1rem;
+  float: left;
+}
+
+#elemento-pai2 {
+  width: 47.9%;
+  height: 100px;
+  background-color: #5ebdb7;
+  padding: 1rem;
+  float: right;
+}
+
+#esquerda1 {
+  float: left;
+  left: 50px;
+}
+
+#esquerda2 {
+  float: right;
+  right: 50px;
+}
+
+#direita1 {
+  float: right;
+  right: 50px;
+}
+
+#direita2 {
+  float: left;
+  left: 50px;
+}
+
+.filhoesquerda {
+  position: relative;
+  top: 50%;
+}
+
+.filhodireita {
+  position: relative;
+  top: 50%;
+}
+
+#elemento-img {
+  float: left;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #5ebdb7;
+
+  p {
+    margin-left: 20px;
+  }
+}
+
+#elemento-img2 {
+  float: right;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #ab64d3;
+
+  p {
+    margin-left: 20px;
+  }
+}
+
+img {
+  max-width: 100%;
+}

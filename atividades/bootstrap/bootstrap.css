@@ -1,0 +1,25 @@
+#cn {
+  #row1 {
+    background-color: #c970c9;
+  }
+
+  #row2 {
+    background-color: #75a8e2;
+  }
+}
+
+#cn1 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+#cn2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+#cn3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
