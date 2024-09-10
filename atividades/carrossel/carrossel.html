@@ -4,45 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/atividades/carrossel/carrossel.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
   <title>Carrossel</title>
 </head>
 <body>
-  <div class="slider">
-
-    <div class="slides">
-
-      <input type="radio" name="radio-btn" id="radio1">
-      <input type="radio" name="radio-btn" id="radio2">
-      <input type="radio" name="radio-btn" id="radio3">
-      <input type="radio" name="radio-btn" id="radio4">
-      <input type="radio" name="radio-btn" id="radio5">
-
-      <div class="slide first">
-        <img src="https://i.pinimg.com/736x/04/42/98/044298ceb9b915c9621459ebdda09dc6.jpg" alt="image 1">
-      </div>
-      <div class="slide">
-        <img src="https://i.pinimg.com/736x/42/b3/b2/42b3b2489c3f87bf777b87feea9776df.jpg" alt="image 2">
-      </div>
-      <div class="slide">
-        <img src="https://i.pinimg.com/736x/eb/77/1a/eb771a9c2b6ab7ce08a2db345ec20dc7.jpg" alt="image 3">
-      </div>
-      <div class="slide">
-        <img src="https://i.pinimg.com/564x/98/ab/24/98ab24d97553a5c414f44372d2be757f.jpg" alt="image 4">
-      </div>
-      <div class="slide">
-        <img src="https://i.pinimg.com/564x/ec/b3/9b/ecb39b44363b51df4075e4fa623ced0d.jpg" alt="image 5 ">
-      </div>
-
+  <section class="slider">
+    <div class="seta arrow-left"><i class="fas fa-chevron-circle-left"></i></div>
+      
+    <img src="https://i.pinimg.com/736x/04/42/98/044298ceb9b915c9621459ebdda09dc6.jpg" alt="slide-1.jpg">
+    <img src="https://i.pinimg.com/736x/eb/77/1a/eb771a9c2b6ab7ce08a2db345ec20dc7.jpg" alt="slide-2.jpg">
+    <img src="https://i.pinimg.com/564x/98/ab/24/98ab24d97553a5c414f44372d2be757f.jpg" alt="slide-3.jpg">
+    <img src="https://i.pinimg.com/564x/ec/b3/9b/ecb39b44363b51df4075e4fa623ced0d.jpg" alt="slide-4.jpg">
+    
+    <div class="seta arrow-right"><i class="fas fa-chevron-circle-right"></i></div>
+      
+    <div class="paginacao">
+      <div class="botao"> <i class="far fa-circle"></i> </div>
+      <div class="botao"> <i class="far fa-circle"></i> </div>
+      <div class="botao"> <i class="far fa-circle"></i> </div>
+      <div class="botao"> <i class="far fa-circle"></i> </div>
     </div>
+  </section>
 
-    <div class="manual-navigation">
-      <label for="radio1" class="manual-btn"></label>
-      <label for="radio2" class="manual-btn"></label>
-      <label for="radio3" class="manual-btn"></label>
-      <label for="radio4" class="manual-btn"></label>
-      <label for="radio5" class="manual-btn"></label>
-    </div>
-
-  </div>
+  <script>
+    const imgs = document.querySelectorAll(".slider img");
+    const dots = document.querySelectorAll(".botao i");
+    const leftArrow = document.querySelector(".arrow-left");
+    const rightArrow = document.querySelector(".arrow-right");
+    let currentIndex = 0;
+    let time = 7000;
+    const defClass = (startPos, index) => {
+      for (let i = startPos; i < imgs.length; i++) {
+        imgs[i].style.display = "none";
+        dots[i].classList.remove("fa-dot-circle");
+        dots[i].classList.add("fa-circle");
+      }
+      imgs[index].style.display = "block";
+      dots[index].classList.add("fa-dot-circle");
+    };
+    defClass(1, 0);
+    leftArrow.addEventListener("click", function(){
+      currentIndex <= 0 ? currentIndex = imgs.length-1 : currentIndex--;
+      defClass(0, currentIndex);
+    });
+    rightArrow.addEventListener("click", function(){
+      currentIndex >= imgs.length-1 ? currentIndex = 0 : currentIndex++;
+      defClass(0, currentIndex);
+    });
+    const startAutoSlide = () => {
+      setInterval(() => {
+        currentIndex >= imgs.length-1 ? currentIndex = 0 : currentIndex++;
+        defClass(0, currentIndex);
+      }, time);
+    };
+    startAutoSlide();
+  </script>
 </body>
 </html>
